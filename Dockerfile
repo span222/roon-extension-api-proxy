@@ -6,5 +6,7 @@ WORKDIR /
 CMD unzip master.zip -d /roon-api
 WORKDIR /roon-api
 CMD ls -l
+RUN tar xvfz /master.zip
+WORKDIR /roon-api/roon-extension-api-proxy
 RUN npm install
 RUN node .
