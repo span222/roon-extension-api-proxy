@@ -6,8 +6,6 @@ CMD wget https://github.com/marcelveldt/roon-extension-api-proxy/archive/master.
 WORKDIR /
 CMD unzip master.zip -d /roon-api
 WORKDIR /roon-api
-RUN ls -l
-RUN tar xvfz /master.zip
-WORKDIR /roon-api/roon-extension-api-proxy
+WORKDIR /roon-api/roon-extension-api-proxy-master
 RUN npm install
 RUN node .
